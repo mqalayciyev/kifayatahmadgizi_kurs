@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class ApplyController extends Controller
 {
     public function index(){
-        return view('user.pages.apply', ['page' => 'Müraciət et']);
+        return view('user.pages.apply', ['page' =>  __('content.Apply')]);
     }
     public function message(){
         $this->validate(request(), [

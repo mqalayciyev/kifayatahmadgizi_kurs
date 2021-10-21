@@ -83,6 +83,8 @@ return [
 	'Working time' => 'İş vaxtı',
 	'Correct answer' => 'Düzgün cavab',
 	'Your answer' => 'Sizin cavabınız',
-	'Test result' => 'Testin nəticəsi'
+	'Test result' => 'Testin nəticəsi',
+	'News Details' => 'Xəbər detalları',
+    'Test result' => 'Test Nəticəsi'
 
 ];

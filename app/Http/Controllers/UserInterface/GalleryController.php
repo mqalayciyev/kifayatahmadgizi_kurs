@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class GalleryController extends Controller
 {
     public function index(){
-        return view('user.pages.gallery', ['page' => 'Gallery']);
+        return view('user.pages.gallery', ['page' => __('content.Gallery')]);
     }
     public function items(){
         $number = request('number');

@@ -10,14 +10,14 @@ use Illuminate\Http\Request;
 class TeacherController extends Controller
 {
     public function index($page = 1){
-        
+
         $start = ($page - 1) * 6;
         $muellimler = Teachers::offset($start)->limit(6)->get();
         $count = Teachers::count();
         $output = "";
         $pages = ceil($count/6);
-        
-        
+
+
 
         $paginations = '<div class="pagination_blog mt-4"><ul>';
         for($i = 1; $i <= $pages; $i++){
@@ -32,8 +32,8 @@ class TeacherController extends Controller
         if($count <= 6){
             $paginations = '';
         }
-        
-        return view('user.pages.teachers', ['page' => 'Müəllimlər'], compact('muellimler', 'count', 'paginations'));
+
+        return view('user.pages.teachers', ['page' => __('content.Teachers')], compact('muellimler', 'count', 'paginations'));
     }
     public function teacher($teacher, $id){
         $teacher = Teachers::find($id);

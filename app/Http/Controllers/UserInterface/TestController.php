@@ -32,7 +32,7 @@ class TestController extends Controller
             $paginations = '';
         }
 
-        return view('user.pages.tests', ['page' => 'Testlər'], compact('tests', 'count', 'paginations'));
+        return view('user.pages.tests', ['page' => __('content.Tests')], compact('tests', 'count', 'paginations'));
     }
     public function test(){
 
@@ -55,7 +55,7 @@ class TestController extends Controller
             return view('user.pages.test_start', ['page' => $test->name], compact('id', 'session'));
         }
 
-        
+
     }
     public function login(){
         $validator = Validator::make(request()->all(), [
@@ -159,6 +159,6 @@ class TestController extends Controller
         $test_name = $tests->name;
         $result = TestResults::where('test', $test)->where('email', $score->email)->where('score', $user)->get();
         $count = TestResults::where('test', $test)->where('email', $score->email)->where('score', $user)->where('result', 1)->count();
-        return view('user.pages.result',  ['page' => 'Test nəticəsi'], compact('name', 'test_name', 'result', 'questions', 'count'));
+        return view('user.pages.result',  ['page' =>  __('content.Test result')], compact('name', 'test_name', 'result', 'questions', 'count'));
     }
 }

@@ -29,7 +29,7 @@ class CoursesController extends Controller
             $paginations = '';
         }
 
-        return view('user.pages.courses', ['page' => 'Kurslar'], compact('courses', 'count', 'paginations'));
+        return view('user.pages.courses', ['page' =>  __('content.Courses')], compact('courses', 'count', 'paginations'));
     }
     public function cours($cours, $id){
         $cours = Courses::find($id);

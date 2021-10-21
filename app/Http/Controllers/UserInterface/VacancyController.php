@@ -10,6 +10,6 @@ class VacancyController extends Controller
 {
     public function index(){
         $vacancies = Vacancy::where('status', 1)->get();
-        return view('user.pages.vacancy', ['page' => 'Vakansiya'], compact('vacancies'));
+        return view('user.pages.vacancy', ['page' => __('content.Vacancy')], compact('vacancies'));
     }
 }

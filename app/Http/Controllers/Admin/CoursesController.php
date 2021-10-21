@@ -15,7 +15,7 @@ use Image;
 class CoursesController extends Controller
 {
     public function index() {
-        return view('admin.pages.courses.courses', ['page' => 'Kurslar']);
+        return view('admin.pages.courses.courses', ['page' =>  __('content.Courses')]);
     }
     public function index_data()
     {

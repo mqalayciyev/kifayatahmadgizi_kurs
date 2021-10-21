@@ -11,7 +11,7 @@ class AboutController extends Controller
 {
     public function index() {
         $entry = About::where('id', 1)->firstOrFail();
-        return view('admin.pages.about.about', ['page' => 'Haqqımızda'], compact('entry'));
+        return view('admin.pages.about.about', ['page' => __('content.About us')], compact('entry'));
     }
     public function save($id = 0){
 

@@ -8,6 +8,6 @@ use Illuminate\Http\Request;
 class SearchController extends Controller
 {
     public function index(){
-        return view('user.pages.seacrh', ['page' => 'Axtarış']);
+        return view('user.pages.seacrh', ['page' => __('content.Search')]);
     }
 }

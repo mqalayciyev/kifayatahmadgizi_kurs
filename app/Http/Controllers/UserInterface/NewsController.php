@@ -30,12 +30,12 @@ class NewsController extends Controller
             $paginations = '';
         }
 
-        return view('user.pages.news', ['page' => 'Xəbərlər'], compact('news', 'count', 'paginations', 'latest'));
+        return view('user.pages.news', ['page' => __('content.News')], compact('news', 'count', 'paginations', 'latest'));
     }
     public function news($slug, $id){
         $news = News::find($id);
         $image = NewsImages::find($news->image);
         $latest = News::limit(3)->orderByDesc('created_at')->get();
-        return view('user.pages.news_detail', ['page' => 'Xəbərlər'], compact('news', 'latest', 'image'));
+        return view('user.pages.news_detail', ['page' => __('content.News Details')], compact('news', 'latest', 'image'));
     }
 }

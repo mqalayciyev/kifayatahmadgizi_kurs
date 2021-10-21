@@ -12,7 +12,7 @@ class GalleryController extends Controller
 {
     public function index()
     {
-        return view('admin.pages.gallery.index', ['page' => 'Gallery']);
+        return view('admin.pages.gallery.index', ['page' =>  __('content.Gallery')]);
     }
     public function save_slide()
     {

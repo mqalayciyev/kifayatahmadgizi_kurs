@@ -11,11 +11,11 @@ class MethodController extends Controller
 {
     public function index(){
         $method = Method::find(1);
-        return view('user.pages.method', ['page' => 'Method'], compact('method'));
+        return view('user.pages.method', ['page' => __('content.Method')], compact('method'));
     }
     public function studies(){
         $studies = Studies::find(1);
-        return view('user.pages.studies', ['page' => 'Studies'], compact('studies'));
+        return view('user.pages.studies', ['page' => __('content.Studies')], compact('studies'));
     }
 
 }

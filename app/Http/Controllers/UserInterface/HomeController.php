@@ -17,6 +17,6 @@ class HomeController extends Controller
 
     }
     public function sitemap () {
-        return view('user.pages.sitemap', ['page' => 'Sitemap']);
+        return view('user.pages.sitemap', ['page' => __('content.Sitemap')]);
     }
 }

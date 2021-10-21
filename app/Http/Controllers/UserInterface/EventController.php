@@ -29,7 +29,7 @@ class EventController extends Controller
             $paginations = '';
         }
 
-        return view('user.pages.events', ['page' => 'Tədbirlər'], compact('events', 'count', 'paginations'));
+        return view('user.pages.events', ['page' => __('content.Events')], compact('events', 'count', 'paginations'));
     }
     public function event($slug, $id){
         $event = Events::find($id);
