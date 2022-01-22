@@ -16,9 +16,11 @@ class MethodController extends Controller
     public function save($id = 0){
 
         $this->validate(request(), [
-            'text' => 'required',
+            'text_az' => 'required',
+            'text_en' => 'required',
+            'text_ru' => 'required',
         ]);
-        $data = request()->only('text');
+        $data = request()->only('text_az', 'text_en', 'text_ru');
 
         $entry = Method::where('id', 1)->firstOrFail();
         $entry->update($data);

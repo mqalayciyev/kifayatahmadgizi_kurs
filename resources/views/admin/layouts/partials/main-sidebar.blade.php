@@ -87,6 +87,29 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item {{ (url()->current() == route('admin.country') || url()->current() == route('admin.university')) ? 'menu-open' : '' }}">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-user-graduate"></i>
+              <p>
+                Xaricdə təhsil
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href={{ route('admin.country') }} class="nav-link {{ url()->current() == route('admin.country') ? 'active' : '' }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ölkələr</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href={{ route('admin.university') }} class="nav-link {{ url()->current() == route('admin.university') ? 'active' : '' }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Universitetlər</p>
+                </a>
+              </li>
+            </ul>
+          </li>
 
 
           <li class="nav-item">

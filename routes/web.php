@@ -58,6 +58,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
         Route::get('/sitemap', [App\Http\Controllers\UserInterface\HomeController::class, 'sitemap'])->name('sitemap');
         Route::get('/gallery', [App\Http\Controllers\UserInterface\GalleryController::class, 'index'])->name('gallery');
         Route::get('/gallery-items', [App\Http\Controllers\UserInterface\GalleryController::class, 'items'])->name('gallery.items');
+        Route::get('/countries', [App\Http\Controllers\UserInterface\CountryController::class, 'index'])->name('countries');
+        Route::get('/universities/{slug}', [App\Http\Controllers\UserInterface\CountryController::class, 'universities'])->name('universities');
     });
 
 
@@ -115,6 +117,29 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
                 Route::get('/delete_data', [App\Http\Controllers\Admin\TestsController::class, 'delete_data_testscore'])->name('admin.testscore.delete_data');
                 Route::get('/mass_remove', [App\Http\Controllers\Admin\TestsController::class, 'mass_remove_testscore'])->name('admin.testscore.mass_remove');
                 Route::post('/view', [App\Http\Controllers\Admin\TestsController::class, 'view'])->name('admin.testscore.view');
+            });
+			Route::group(['prefix' => 'country'], function () {
+                Route::get('/', [App\Http\Controllers\Admin\CountryController::class, 'index'])->name('admin.country');
+                Route::get('/index_data', [App\Http\Controllers\Admin\CountryController::class, 'index_data'])->name('admin.country.index_data');
+                Route::post('/post_data', [App\Http\Controllers\Admin\CountryController::class, 'post_data'])->name('admin.country.post_data');
+                Route::get('/fetch_data', [App\Http\Controllers\Admin\CountryController::class, 'fetch_data'])->name('admin.country.fetch_data');
+                Route::get('/delete_data', [App\Http\Controllers\Admin\CountryController::class, 'delete_data'])->name('admin.country.delete_data');
+                Route::get('/mass_remove', [App\Http\Controllers\Admin\CountryController::class, 'mass_remove'])->name('admin.country.mass_remove');
+            });
+
+            Route::group(['prefix' => 'university'], function () {
+                Route::get('/', [App\Http\Controllers\Admin\UniversityController::class, 'index'])->name('admin.university');
+                Route::get('/index_data', [App\Http\Controllers\Admin\UniversityController::class, 'index_data'])->name('admin.university.index_data');
+                Route::post('/post_data', [App\Http\Controllers\Admin\UniversityController::class, 'post_data'])->name('admin.university.post_data');
+                Route::get('/fetch_data', [App\Http\Controllers\Admin\UniversityController::class, 'fetch_data'])->name('admin.university.fetch_data');
+                Route::get('/delete_data', [App\Http\Controllers\Admin\UniversityController::class, 'delete_data'])->name('admin.university.delete_data');
+                Route::get('/mass_remove', [App\Http\Controllers\Admin\UniversityController::class, 'mass_remove'])->name('admin.university.mass_remove');
+                Route::get('/new', [App\Http\Controllers\Admin\UniversityController::class, 'form'])->name('admin.university.new');
+                Route::get('/edit/{id}', [App\Http\Controllers\Admin\UniversityController::class, 'form'])->name('admin.university.edit');
+                Route::post('/save/{id?}', [App\Http\Controllers\Admin\UniversityController::class, 'save'])->name('admin.university.save');
+                Route::post('/remove_image', [App\Http\Controllers\Admin\UniversityController::class, 'remove_image'])->name('admin.university.remove_image');
+                Route::post('/load_images', [App\Http\Controllers\Admin\UniversityController::class, 'load_images'])->name('admin.university.load_images');
+                Route::get('/countries', [App\Http\Controllers\Admin\UniversityController::class, 'countries'])->name('admin.university.countries');
             });
             Route::group(['prefix' => 'news'], function () {
                 Route::get('/', [App\Http\Controllers\Admin\InfoController::class, 'news'])->name('admin.news');

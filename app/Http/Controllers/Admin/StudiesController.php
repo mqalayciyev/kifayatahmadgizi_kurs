@@ -15,9 +15,11 @@ class StudiesController extends Controller
     public function save($id = 0){
 
         $this->validate(request(), [
-            'text' => 'required',
+            'text_az' => 'required',
+            'text_en' => 'required',
+            'text_ru' => 'required',
         ]);
-        $data = request()->only('text');
+        $data = request()->only('text_en', 'text_az', 'text_ru');
 
         $entry = Studies::where('id', 1)->firstOrFail();
         $entry->update($data);

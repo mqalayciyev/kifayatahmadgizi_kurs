@@ -2638,10 +2638,20 @@ footer .shapes1_footer {
     color: #ffffff;
     line-height: 70px;
 }
+.register_area .form-content h3 {
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 70px;
+}
 .register_area .form-content p {
     color: #ffffff;
     margin: 0;
+    font-size: 20px;
+    font-weight: 400;
     padding-top: 30px;
+}
+.register_area .form-content span{
+    color: #ffb606;
 }
 .register_area .form-content .count_student {
     margin-top: 70px;
@@ -4688,9 +4698,10 @@ footer .shapes1_footer {
 }
 
 .header .intro_wrapper {
-    background: url("../images/banner/banner_3.png") no-repeat center center;
+    background-image: url("../images/banner/inner_banner_4.jpg");
     min-height: 300px;
     background-size: cover;
+    background-repeat:  no-repeat;
     position: relative;
     padding: 180px 0;
 }
@@ -7560,10 +7571,6 @@ footer .shapes1_footer {
     padding: 15px 0 0;
 }
 
-.header .intro_wrapper {
-    background: url("../images/banner/inner_banner_4.jpg") no-repeat center
-        center !important;
-}
 .header .popular_courses {
     padding: 100px 0 100px;
 }

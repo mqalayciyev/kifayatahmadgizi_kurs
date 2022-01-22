@@ -9,8 +9,8 @@
         @include('admin.layouts.partials.navbar')
         @include('admin.layouts.partials.main-sidebar')
 
-        <div class="content-wrapper">
-            @include('admin.layouts.partials.breadcrumb')
+        <div class="content-wrapper pt-3">
+            {{-- @include('admin.layouts.partials.breadcrumb') --}}
             @yield('content')
         </div>
 

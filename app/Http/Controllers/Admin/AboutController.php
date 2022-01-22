@@ -18,9 +18,11 @@ class AboutController extends Controller
         $this->validate(request(), [
             'address' => 'required',
             'mobile' => 'required',
-            'text' => 'required',
+            'text_az' => 'required',
+            'text_en' => 'required',
+            'text_ru' => 'required',
         ]);
-        $data = request()->only('address', 'start_day', 'start_time', 'end_day', 'end_time', 'mobile', 'phone', 'map', 'text', 'books', 'courses', 'experience', 'instagram', 'facebook', 'twitter', 'youtube', 'email');
+        $data = request()->only('address', 'start_day', 'start_time', 'end_day', 'end_time', 'mobile', 'phone', 'map', 'text_az', 'text_en', 'text_ru', 'books', 'courses', 'experience', 'instagram', 'facebook', 'twitter', 'youtube', 'email');
         if (request()->hasFile('logo')) {
             // $image = request()->file('logo');
             // $imagename = 'logo.'.$image->getClientOriginalExtension();

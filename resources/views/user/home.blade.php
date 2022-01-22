@@ -118,7 +118,8 @@
 
 
 
-    <section class="register_area">
+    <section class="register_area p-0">
+        <div class="blur" style="background-color: rgba(0, 0, 0, 0.4); height: 100%; padding: 130px 0;">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-5">
@@ -178,8 +179,9 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-7 form-content">
-                    <h2>@lang('content.All educational opportunities in one place')</h2>
-                    {{-- <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra. Pede phasellus<br> eget.felis dapibus arcu donec viverra. Pede phasellus eget. Etiam maecenas vel<br> vici quis dictum rutrum nec nisi et.</p> --}}
+                    <h3>@lang('content.Form content text 1')</h3>
+                    <h2>@lang('content.Form content text 2')</h2>
+                    <p>@lang('content.Form content text 3')</p>
                     <div class="count_student">
                         <div class="single_count">
                             <span class="counter">{{ old('books', $about->books) }}</span>
@@ -197,6 +199,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </section><!-- ./ End Register Area section -->
 
 

@@ -37,11 +37,12 @@
         <div class="edu_nav">
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-white bg-faded">
-                    <a class="navbar-brand" href={{ route('home') }}><img style="width: 128px; height: 128px;" src={{ asset('/images/' . old('logo', $about->logo)) }} alt="logo"></a>
+                    <a class="navbar-brand" href={{ route('home') }}><img style="width: 128px;" src={{ asset('/images/' . old('logo', $about->logo)) }} alt="logo"></a>
                     <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
                         <ul class="navbar-nav nav lavalamp ml-auto menu">
                             <li class="nav-item"><a href={{ route('home') }} class="nav-link {{ url()->current() == route('home') ? 'active' : '' }}">@lang('content.Home Page')</a></li>
                             <li class="nav-item"><a href={{ route('gallery') }} class="nav-link {{ url()->current() == route('gallery') ? 'active' : '' }}">@lang('content.Gallery')</a></li>
+                            <li class="nav-item"><a href={{ route('countries') }} class="nav-link {{ url()->current() == route('countries') ? 'active' : '' }}">@lang('content.Studying Abroad')</a></li>
                             <li class="nav-item"><a target="_blank" href="" class="nav-link">@lang('content.Book Store')</a></li>
                             <li class="nav-item"><a href={{ route('courses')}} class="nav-link {{ url()->current() == route('courses') ? 'active' : '' }}">@lang('content.Courses')</a>
                                 <ul class="navbar-nav nav mx-auto">
@@ -75,15 +76,15 @@
                                     <li class="nav-item"><a href={{ route('events') }} class="nav-link {{ url()->current() == route('events') ? 'active' : '' }}">@lang('content.Events')</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a href="javascript:void(0)" class="nav-link {{ ( url()->current() == route('method') || url()->current() == route('studies') || url()->current() == route('contact'))  ? 'active' : '' }}">@lang('content.About us')</a>
+                            <li class="nav-item"><a href="javascript:void(0)" class="nav-link {{ ( url()->current() == route('about') || url()->current() == route('sitemap') || url()->current() == route('method') || url()->current() == route('studies') || url()->current() == route('contact'))  ? 'active' : '' }}">@lang('content.More')</a>
                                 <ul class="navbar-nav nav mx-auto">
+                                    <li class="nav-item"><a href={{ route('about') }} class="nav-link {{ url()->current() == route('about') ? 'active' : '' }}">@lang('content.About us')</a></li>
                                     <li class="nav-item"><a href={{ route('method') }} class="nav-link {{ url()->current() == route('method') ? 'active' : '' }}">@lang('content.Method')</a></li>
                                     <li class="nav-item"><a href={{ route('studies') }} class="nav-link {{ url()->current() == route('studies') ? 'active' : '' }}">@lang('content.Studies')</a></li>
                                     <li class="nav-item"><a href={{ route('contact') }} class="nav-link {{ url()->current() == route('contact') ? 'active' : '' }}">@lang('content.Contact')</a></li>
+                                    <li class="nav-item"><a href={{ route('sitemap') }} class="nav-link {{ url()->current() == route('sitemap') ? 'active' : '' }}">@lang('content.Sitemap')</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a href={{ route('sitemap') }} class="nav-link {{ url()->current() == route('sitemap') ? 'active' : '' }}">@lang('content.Sitemap')</a></li>
-
                         </ul>
                     </div>
                     {{-- <div class="mr-auto search_area">

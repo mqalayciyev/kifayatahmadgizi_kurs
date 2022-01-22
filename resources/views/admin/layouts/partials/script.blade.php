@@ -30,7 +30,7 @@
 <!-- AdminLTE App -->
 <script src={{ asset('admin/dist/js/adminlte.js') }}></script>
 <!-- AdminLTE for demo purposes -->
-<script src={{ asset('admin/dist/js/demo.js') }}></script>
+{{-- <script src={{ asset('admin/dist/js/demo.js') }}></script> --}}
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <!--<script src={{ asset('admin/dist/js/pages/dashboard.js') }}></script>-->
 
@@ -48,6 +48,8 @@
 <script src={{ asset('admin/plugins/datatables-buttons/js/buttons.print.min.js') }}></script>
 <script src={{ asset('admin/plugins/datatables-buttons/js/buttons.colVis.min.js') }}></script>
 <script src="{{ asset('admin/dist/js/croppie.js') }}"></script>
+<script src="{{ asset('admin/dist/js/imageuploadify.min.js') }}"></script>
+<script src="{{ asset('admin/dist/select2/dist/js/select2.full.min.js') }}"></script>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js" integrity="sha512-Gs+PsXsGkmr+15rqObPJbenQ2wB3qYvTHuJO6YJzPe/dTLvhy0fmae2BcnaozxDo5iaF8emzmCZWbQ1XXiX2Ig==" crossorigin="anonymous"></script>-->
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 

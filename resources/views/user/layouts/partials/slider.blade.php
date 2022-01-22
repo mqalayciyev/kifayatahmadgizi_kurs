@@ -21,26 +21,30 @@
                                 data-y="['middle','middle','middle','middle']" data-voffset="['-300','-280','-250','-200']"
                                 data-fontsize="['60','40','30','18']"
                                 data-lineheight="['70','80','70','70']"
-                                data-width="none"
+                                data-width="90vw"
                                 data-height="none"
-                                data-whitespace="nowrap"
+                                data-whitespace="pre-wrap"
                                 data-type="text"
+                                data-textAlign="center"
                                 data-responsive_offset="on"
                                 data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":400,"to":"o:1;","delay":100,"split":"chars","splitdelay":0.05,"ease":"Power3.easeInOut"},{"delay":"wait","speed":100,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
 
-                                style="z-index: 7; color:#fff; font-family:'Rubik', sans-serif; max-width: auto; max-height: auto; white-space: nowrap; font-weight:500;">{{$item->title_1}}
+                                style="z-index: 7; color:#fff; font-family:'Rubik', sans-serif; max-width: auto; max-height: auto; white-space: pre-wrap; font-weight:500; text-align: center;">{{$item->title_1}}
                             </div>
                             <!-- LAYER NR. 2 -->
                             <div class="tp-caption NotGeneric-Title   tp-resizeme"
                                 id="slide-3045-layer-1"
-                                data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                                data-y="['middle','middle','middle','middle']" data-voffset="['-150','-140','-120','-120']"
+                                data-x="['center','center','center','center']"
+                                data-hoffset="['0','0','0','0']"
+                                data-y="['middle','middle','middle','middle']"
+                                data-voffset="['-150','-140','-120','-120']"
                                 data-fontsize="['170','120','80','40']"
                                 data-lineheight="['200','120','70','70']"
-                                data-width="none"
+                                data-width="90vw"
                                 data-height="none"
-                                data-whitespace="nowrap"
+                                data-whitespace="pre-wrap"
                                 data-type="text"
+                                data-textAlign="center"
                                 data-responsive_offset="on"
                                 data-frames='[{"from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1000,"split":"chars","splitdelay":0.05,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
                                 data-paddingtop="[10,10,10,10]"
@@ -48,7 +52,7 @@
                                 data-paddingbottom="[10,10,10,10]"
                                 data-paddingleft="[0,0,0,0]"
 
-                                style="z-index: 5; font-family:'Roboto', sans-serif; font-weight: 700; white-space: nowrap;text-transform:left;">{{$item->title_2}}
+                                style="z-index: 5; font-family:'Roboto', sans-serif; font-weight: 700; white-space: pre-wrap; text-transform: center; text-align: center;">{{$item->title_2}}
                             </div>
 
                             <!-- LAYER NR.3 -->
@@ -70,7 +74,9 @@
                                 data-paddingbottom="[10,10,10,10]"
                                 data-paddingleft="[0,0,0,0]"
 
-                                style="z-index: 5; font-family:'Roboto', sans-serif; font-weight: 700; white-space: nowrap;text-transform:left;">Kifayat Ahmad Gizi
+                                style="z-index: 5; font-family:'Roboto', sans-serif; font-weight: 700; white-space: nowrap;text-transform:left;"
+                                >
+                                {{-- Kifayat Ahmadgizi --}}
                             </div>
 
                             <!-- LAYER NR. 4 -->

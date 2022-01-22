@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-sm-12">
-               {!! old('text', $studies->text) !!}
+               {!! old('text_' . LaravelLocalization::getCurrentLocale(), $studies['text_' . LaravelLocalization::getCurrentLocale()]) !!}
             </div>
         </div>
     </div>
